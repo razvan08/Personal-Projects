@@ -1,0 +1,4 @@
+In a matrix with dimensions m x m we have m vehicles on the last line , every vehicle ocupy one square . We need to move these vehicles to the first line but in reverse order which
+means that vehicle 1 will be on the first line at column m , vehicle 2 will be on the first line at column m-1 and so on ....
+Every vehicle can move : UP , DOWN , LEFT, RIGHT or STAY but if a vehicle is not moving , only one adiacent vehicle can hope over it .
+IMPORTANT NOTE : 2 vehicles can't ocupy the same square.
