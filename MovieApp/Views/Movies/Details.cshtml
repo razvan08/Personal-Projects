@@ -1,0 +1,97 @@
+﻿@model MvcMovie.Models.Movie
+@using MvcMovie.Models
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+<h1>Details</h1>
+
+<div>
+    <h4>Movie</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ReleaseDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Genre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Genre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+       
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    <span>Name</span>
+                </th>
+                <th>
+                    <span>Review</span>
+                </th>
+                <th>
+                    <span>Date</span>
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="show-data">
+               
+        </tbody>
+    </table>
+    <div class="comment-box">
+        Name <input class="name-text" type="text" /><br />
+        Review <input class="review-text" type="text" /><br />
+        <input type="submit" value="Send review" id="submit" />
+    </div>
+ 
+<script>
+    $(document).ready(function () {
+        $("#submit").click(function () {
+            var name = $(".name-text").val();
+            var review = $(".review-text").val();
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0');
+            var yyyy = today.getFullYear();
+            today = mm + '-' + dd + '-' + yyyy;
+
+            var comment = "<tr> <td>" + name + "</td>" + "<td>" + review + "</td>" + "<td>" + today + "</td> </tr>"
+            $(".show-data").append(comment);
+        });
+    });
+
+</script>
+
