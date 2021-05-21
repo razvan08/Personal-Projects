@@ -1,0 +1,2 @@
+C:\Users\Razvan\source\repos\Dijkstra\Dijkstra\Debug\Dijkstra.exe
+C:\Users\Razvan\source\repos\Dijkstra\Dijkstra\Debug\Dijkstra.pdb

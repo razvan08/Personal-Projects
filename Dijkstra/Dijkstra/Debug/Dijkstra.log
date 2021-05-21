@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\Razvan\source\repos\Dijkstra\Dijkstra\main.cpp(26,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Razvan\source\repos\Dijkstra\Dijkstra\main.cpp(69,27): warning C4018: '<': signed/unsigned mismatch
+  Dijkstra.vcxproj -> C:\Users\Razvan\source\repos\Dijkstra\Debug\Dijkstra.exe
