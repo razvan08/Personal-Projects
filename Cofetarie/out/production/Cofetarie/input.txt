@@ -1,0 +1,12 @@
+Diplomat
+2
+110
+Visine
+5
+100
+Cirese
+8
+80
+Mere
+3
+100
